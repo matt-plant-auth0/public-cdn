@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+  <html lang="en" >
+  <head>
+        <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    
+    <meta name="robots" content="noindex, nofollow" />
+    
+    
+    <link rel="stylesheet" href="https://cdn.auth0.com/ulp/react-components/1.68.5/css/main.cdn.min.css" />
+    <!-- <style id="custom-styles-container">
+      
+        
+
+
+
+:root {
+    --primary-color: #00615D;
+  }
+:root {
+    --button-font-color: #ffffff;
+  }
+:root {
+    --secondary-button-border-color: #ced4da;
+    --social-button-border-color: #ced4da;
+    --radio-button-border-color: #ced4da;
+  }
+:root {
+    --secondary-button-text-color: #000000;
+  }
+:root {
+    --link-color: #00615D;
+  }
+:root {
+    --title-font-color: #000000;
+  }
+:root {
+    --font-default-color: #000000;
+  }
+:root {
+    --widget-background-color: #ffffff;
+  }
+:root {
+    --box-border-color: #f8ae00;
+  }
+:root {
+    --font-light-color: #495057;
+  }
+:root {
+    --input-text-color: #495057;
+  }
+:root {
+    --input-border-color: #ced4da;
+    --border-default-color: #ced4da;
+  }
+:root {
+    --input-background-color: #ffffff;
+  }
+:root {
+    --icon-default-color: #000000;
+  }
+:root {
+    --error-color: #d03c38;
+    --error-text-color: #000000;
+  }
+:root {
+    --success-color: #01d00f;
+  }
+:root {
+    --base-focus-color: #000000;
+    --transparency-focus-color: rgba(0,0,0, 0.15);
+  }
+:root {
+    --base-hover-color: #00534F;
+    --transparency-hover-color: rgba(0,83,79, var(--hover-transparency-value));
+  }
+
+
+
+@font-face {
+    font-family: 'ULP Custom';
+    font-style: normal;
+    font-weight: var(--font-default-weight);
+    src: local('ULP Custom'), url('https://cdn.demo.okta.com/fonts/aeonik-regular.woff2') format('woff');
+  }
+
+  body {
+    --font-family: 'ULP Custom', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, sans-serif;
+  }
+html, :root {
+    font-size: 16px;
+    --default-font-size: 16px;
+  }
+body {
+    --title-font-size: 1.5rem;
+    --title-font-weight: var(--font-default-weight);
+  }
+.ccfa27a9c {
+    font-size: 0.875rem;
+    font-weight: var(--font-default-weight);
+  }
+.c1920627f {
+    font-size: 0.875rem;
+    font-weight: var(--font-default-weight);
+  }
+.ce1523b8d, .ca7015fb8 {
+    font-size: 1rem;
+    font-weight: var(--font-default-weight);
+  }
+.c65b93ce5 {
+    font-size: 1rem;
+    font-weight: var(--font-default-weight);
+  }
+.cc05f448f, .c8d123439 {
+    font-size: 0.875rem;
+    font-weight: var(--font-bold-weight) !important;
+  }
+
+
+
+
+:root {
+    --button-border-width: 1px;
+    --social-button-border-width: 1px;
+    --radio-border-width: 1px;
+  }
+body {
+    --button-border-radius: 3px;
+    --radio-border-radius: 3px;
+  }
+:root {
+    --input-border-width: 1px;
+  }
+body {
+    --input-border-radius: 3px;
+  }
+:root {
+    --border-radius-outer: 30px;
+  }
+:root {
+    --box-border-width: 1px;
+  }
+
+
+
+
+
+    body {
+      --logo-alignment: 0 auto;
+    }
+  
+
+    .cf6aa4232 {
+      content: url('https://www.frontierag.co.uk/images/mfweblogo.png');
+    }
+  
+body {
+    --logo-height: 90px;
+  }
+  .cf6aa4232 {
+    height: var(--logo-height);
+  }
+  
+
+    body {
+      --header-alignment: center;
+    }
+  
+
+
+
+
+.cde2225f6 {
+    --page-background-alignment: center;
+  }
+body {
+    --page-background-color: #f4f2ec;
+  }
+.cde2225f6 {
+    --page-background-image: url('https://www.frontierag.co.uk/images/frontier/homepage-banners/banner1.jpg');
+  }
+
+
+
+
+      
+    </style> -->
+    <style>
+      /* By default, hide features for javascript-disabled browsing */
+      /* We use !important to override any css with higher specificity */
+      /* It is also overriden by the styles in <noscript> in the header file */
+      .no-js {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
+    </style>
+    <noscript>
+      <style>
+        /* We use !important to override the default for js enabled */
+        /* If the display should be other than block, it should be defined specifically here */
+        .js-required { display: none !important; }
+        .no-js {
+          clip: auto;
+          clip-path: none;
+          height: auto;
+          overflow: auto;
+          position: static;
+          white-space: normal;
+          width: var(--prompt-width);
+        }
+      </style>
+    </noscript>
+    
+    <title>Log in | Storytime</title>
+  </head>
+  
+  <body>
+    <div class="c7dcf781e cde2225f6">
+  
+<main class="c1d06305d login">
+  <section class="c14f485c0 _prompt-box-outer c59e5c52b">
+    <div class="ce6ffa8fc c31feaaff">
+    
+      <div class="c8432ef29">
+        <header class="cb0ad632d cbae3df62">
+          <div title="Account 1" id="custom-prompt-logo" style="width: auto !important; height: 60px !important; position: static !important; margin: auto !important; padding: 0 !important; background-color: transparent !important; background-position: center !important; background-size: contain !important; background-repeat: no-repeat !important"></div>
+        
+          <img class="cf6aa4232 c71e4e139" id="prompt-logo-center" src="https://www.frontierag.co.uk/images/mfweblogo.png" alt="Account 1" />
+        
+          
+            <h1 class="c48a74496 c1ac9f45c"> </h1>
+          
+        
+          <div class="ccfa27a9c c77ce1c34">
+
+              <p class="ca56f20a8 ce1d251e4">Please choose one of your organisations to proceed:</p>
+            
+          </div>
+        </header>
+      
+        <div class="c1920627f cd0cf27f4">
+          
+        
+          
+            <form method="POST" class="c71891e72 c6e2c49b2" data-form-primary="true" id="main_form">
+              <input type="hidden" name="state" value="hqFo2SBveF9rcTVWN1JvMXBhamtHTndJSHl3LUdJTDVXY29hOKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFJBSC1fNXpyeWpEbGdjc1NxZGI1QXBEaUJkN3B3SGh1o2NpZNkgRHBTZ0JNb29TbGRKRGZ0ckQ1WmdaYzZxZlFpWkVNSVGlb3JnaWS0b3JnX3QwZ1l0RjJ4SGJ6NjYwdGenb3JnbmFtZaMxMjM" />
+            
+              <div class="c0910874f c7eacfd20">
+                <div class="cc13c1868">
+                  
+
+                  <div class="input-wrapper _input-wrapper">
+                    <div class="ce3feb52e c399c6b0d select cefd9d79e" data-action-text="" data-alternate-action-text="">
+                      <label class="c65b93ce5 no-js c54854d7e c29f466c3" for="orgSelect">
+                        Organisation
+                      </label>
+                    
+                      <select class="input c4dcbae3f c5ebd0178" name="orgSelect" id="orgSelect" required autoFocus>
+                        
+                      </select>
+                    
+                      <div class="c65b93ce5 js-required c54854d7e c29f466c3" data-dynamic-label-for="orgSelect" aria-hidden="true">
+                        Organisation
+                      </div>
+                    </div>
+                  
+                    
+                  </div>
+                
+                  
+                </div>
+              </div>
+            
+              <div class="ced0ab88b">
+                
+                  <button type="submit" name="action" value="default" class="ce1523b8d c85726882 c567db5a5 cb74e5196 cdff2c08e" data-action-button-primary="true">Continue</button>
+                
+              </div>
+            </form>
+          
+        </div>
+      </div>
+    </div>
+  
+    
+  </section>
+</main>
+<script id="client-scripts" type="text/javascript">
+!function(){
+    var data = JSON.parse(atob(location.search.replace('?data=','')));
+    var orgData = data.org_data;
+    console.log(orgData);
+    
+    orgData.forEach((org, i) => {
+        var optEl = document.createElement('option');
+        var selectEl = document.getElementById('orgSelect');
+
+        optEl.innerText = org.display_name;
+        optEl.value = org.id;
+
+        selectEl.appendChild(optEl);
+    });
+
+    document.getElementById('orgSelect').onchange = e => {
+        var selectedOrgId = e.target.options[e.target.selectedIndex].value;
+        var selectedOrg = orgData.find((org, i) => {
+            if(org.id === selectedOrgId){
+                return org;
+            }
+        });
+        
+        document.getElementById('prompt-logo-center').src = selectedOrg.branding.logo_url;
+    };
+
+    var t,e,v,h,n,r={exports:function(n,a){var r={};function i(t,e,n,r){return t.addEventListener(e,n,r)}function o(t){return"string"==typeof t}function c(t,e){return t.getAttribute(e)}function s(t,e,n){return t.setAttribute(e,n)}return{addClass:function(t,e){if(t.classList)return t.classList.add(e);var n=t.className.split(" ");-1===n.indexOf(e)&&(n.push(e),t.className=n.join(" "))},toggleClass:function(t,e){if(t.classList)return t.classList.toggle(e);var n=t.className.split(" "),r=n.indexOf(e);-1!==r?n.splice(r,1):n.push(e),t.className=n.join(" ")},addClickListener:function(t,e){return i(t,"click",e)},addEventListener:i,getAttribute:c,getElementById:function(t){return a.getElementById(t)},getParent:function(t){return t.parentNode},isString:o,loadScript:function(t){var e=a.createElement("script");e.src=t,e.async=!0,a.body.appendChild(e)},poll:function(t){var i=t.interval||2e3,e=t.url||n.location.href,o=t.condition||function(){return!0},c=t.onSuccess||function(){},s=t.onError||function(){};return setTimeout(function r(){var a=new XMLHttpRequest;return a.open("GET",e),a.setRequestHeader("Accept","application/json"),a.onload=function(){if(200===a.status){var t="application/json"===a.getResponseHeader("Content-Type").split(";")[0]?JSON.parse(a.responseText):a.responseText;return o(t)?c():setTimeout(r,i)}if(429!==a.status)return s({status:a.status,responseText:a.responseText});var e=1e3*Number.parseInt(a.getResponseHeader("X-RateLimit-Reset")),n=e-(new Date).getTime();return setTimeout(r,i<n?n:i)},a.send()},i)},querySelector:function(t,e){return o(t)?a.querySelector(t):t.querySelector(e)},querySelectorAll:function(t,e){var n=o(t)?a.querySelectorAll(t):t.querySelectorAll(e);return Array.prototype.slice.call(n)},removeClass:function(t,e){if(t.classList)return t.classList.remove(e);var n=t.className.split(" "),r=n.indexOf(e);-1!==r&&(n.splice(r,1),t.className=n.join(" "))},setAttribute:s,removeAttribute:function(t,e){return t.removeAttribute(e)},swapAttributes:function(t,e,n){var r=c(t,e),a=c(t,n);s(t,n,r),s(t,e,a)},setGlobalFlag:function(t,e){r[t]=!!e},getGlobalFlag:function(t){return!!r[t]},preventFormSubmit:function(t){t.stopPropagation(),t.preventDefault()},matchMedia:function(t){return"function"!=typeof n.matchMedia&&n.matchMedia(t).matches},dispatchEvent:function(t,e,n){var r;"function"!=typeof Event?(r=a.createEvent("Event")).initCustomEvent(e,n,!1):r=new Event(e,{bubbles:n}),t.dispatchEvent(r)},setTimeout:setTimeout,timeoutPromise:function(t,a){return new Promise(function(e,n){var r=setTimeout(function(){n(new Error("timeoutPromise: promise timed out"))},t);a.then(function(t){clearTimeout(r),e(t)},function(t){clearTimeout(r),n(t)})})}}}}.exports(window,document);((t={}).exports=function(r,t,o,c,s,u,l){t("div.ce3feb52e.password").forEach(function(t){var a,i,e=r(t,"input"),n=r(t,'[data-action="toggle"]');o(t,(a=e,i=n,function(t){if(t.target.classList.contains("ulp-button-icon")){if(a.type="password"===a.type?"text":"password",i){var e=i.querySelector(".show-password-tooltip"),n=i.querySelector(".hide-password-tooltip");e&&u(e,"hide"),n&&u(n,"hide")}var r=l(a);"text"===a.type?c(r,"show"):s(r,"show")}}))})},t.exports)(r.querySelector,r.querySelectorAll,r.addClickListener,r.addClass,r.removeClass,r.toggleClass,r.getParent),{exports:function(t,r,a,e){var n=t(".c1d06305d"),i=t("#alert-trigger"),o=t(".c60973eff"),c=t(".c71f0380d"),s=!1;i&&c&&n&&e(n,function(t){var e=t.target===i,n=c.contains(t.target);return e&&!s?(r(o,"show"),void(s=!0)):e&&s||s&&!n?(a(o,"show"),void(s=!1)):void 0})}}.exports(r.querySelector,r.addClass,r.removeClass,r.addClickListener),(v="recaptcha_v2",h="recaptcha_enterprise",(e={}).exports=function(t,a,i,o,c,r){var s,u=a("div[data-recaptcha-sitekey]"),e=a("div[data-recaptcha-sitekey] input"),l=a("#ulp-recaptcha");function d(){return u.getAttribute("data-recaptcha-provider")}function p(t){return e.value=t}function f(t,e){if(t&&t.getBoundingClientRect){if(!r("(max-width: 480px)"))return l.style.transform="",void(l.style.height="");(void 0===e||isNaN(e))&&(e=1.4);var n=72*e;l.style.transform="scale("+e+")",l.style.height=n+"px",l.style.width="10px",u.clientWidth+8<t.getBoundingClientRect().width&&f(t,e-.01)}}u&&(s="recaptchaCallback_"+Math.floor(1000001*Math.random()),window[s]=function(){var t,e,n,r;delete window[s],t=function(t){switch(t){case v:return window.grecaptcha;case h:return window.grecaptcha.enterprise}}(d()),e=t.render(l,{sitekey:u.getAttribute("data-recaptcha-sitekey"),"expired-callback":function(){p(""),i(u,"c6e3954be"),t.reset(e)},callback:function(t){p(t),o(u,"c6e3954be")}}),n=function(t){f(t),c(window,"resize",function(){f(t)})},r=setInterval(function(){var t=a("#ulp-recaptcha iframe");if(t)return clearInterval(r),n(t)},200)},t(function(t,e,n){switch(t){case v:return"https://www.recaptcha.net/recaptcha/api.js?hl="+e+"&onload="+n;case h:return"https://www.recaptcha.net/recaptcha/enterprise.js?render=explicit&hl="+e+"&onload="+n}}(d(),u.getAttribute("data-recaptcha-lang"),s)))},e.exports)(r.loadScript,r.querySelector,r.addClass,r.removeClass,r.addEventListener,r.matchMedia),((n={}).exports=function(r,t,a,i,o,c,s,u,n,l){function d(t){var e=t.target,n=c(e);e.value||l(e,"data-autofilled")?i(n,"c2200e51f"):o(n,"c2200e51f")}function p(t){var e=t.target;"onAutoFillStart"===t.animationName&&(n(e,"data-autofilled",!0),u(t.target,"change",!0),a(e,"keyup",f,{once:!0}))}function f(t){var e=t.target;n(e,"data-autofilled","")}if(r("body._simple-labels"))return t(".c65b93ce5.no-js").forEach(function(t){o(t,"no-js")}),void t(".c65b93ce5.js-required").forEach(function(t){i(t,"hide")});t(".ce3feb52e:not(.c2243d7a9):not(disabled)").forEach(function(t){i(t,"c7aacc294");var e,n=r(t,".input");n.value&&i(t,"c2200e51f"),a(t,"change",d),a(n,"blur",d),a(n,"animationstart",p),e=n,s(function(){e.value&&u(e,"change",!0)},100)})},n.exports)(r.querySelector,r.querySelectorAll,r.addEventListener,r.addClass,r.removeClass,r.getParent,r.setTimeout,r.dispatchEvent,r.setAttribute,r.getAttribute),{exports:function(t,e,n,r,a,i){function o(t){var e=n("submitted");r("submitted",!0),e?a(t):"apple"===i(t.target,"data-provider")&&setTimeout(function(){r("submitted",!1)},2e3)}var c=t("form");c&&c.forEach(function(t){e(t,"submit",o)})}}.exports(r.querySelectorAll,r.addEventListener,r.getGlobalFlag,r.setGlobalFlag,r.preventFormSubmit,r.getAttribute)
+
+    document.getElementById('main_form').onsubmit = e => {
+        e.preventDefault();
+        console.log(`Redirecting to authenticate against org: ${document.getElementById('orgSelect').value}`);
+        console.log(`https://${data.tenant_domain}/authorize?response_type=code&client_id=${data.client_id}&redirect_uri=${data.redirect_uri}`);
+        //location.href = '';
+    };
+
+}();
+
+    </script>
+    </div>
+  </body>
+</html>
