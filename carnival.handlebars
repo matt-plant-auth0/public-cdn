@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Carnival Demonstration</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
+    <style>
+        html{
+    background: #20313b;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: #d2d2d6;
+}
+
+html, body, .viewport {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+#app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#BrandLogo{
+    height: 200px;
+    width: 400px;
+    background-image: url('/static/images/dev_logo.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.content{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+}
+
+p {
+    text-align: center;
+}
+
+.section {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+}
+
+.section h1,h2,h3,h4 {
+    margin: 5px;
+    text-align: center;
+}
+
+/*Pointlessly Pretty Button */
+
+a{
+    text-decoration: none;
+}
+
+.btn {
+    text-transform: uppercase;
+    position: relative;
+    font-weight: bold;
+    display: block;
+    margin: 30px auto;
+    padding: 0;
+
+    overflow: hidden;
+
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+
+    background-color: #e22866;
+    color: #ecf0f1;
+
+    transition: background-color .3s;
+
+  }
+
+  .btn:hover, .btn:focus {
+    background-color: transparent;
+    border: 2px #e22866 solid;
+    cursor: pointer;
+  }
+
+  .btn > * {
+    position: relative;
+  }
+
+  .btn span {
+    display: block;
+    padding: 12px 24px;
+  }
+
+  .btn:before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 0;
+    padding-top: 0;
+
+    border-radius: 100%;
+
+    background-color: transparent;
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .btn:active:before {
+    width: 120%;
+    padding-top: 120%;
+
+    transition: width .2s ease-out, padding-top .2s ease-out;
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap") font;
+@import url("https://use.fontawesome.com/releases/v5.7.1/css/all.css") fontawsome;
+.content {
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+
+#BrandLogo {
+    background-color: white;
+    background-image: url("https://www.pocruises.com//content/dam/po/pno_logo.svg");
+    background-repeat: no-repeat;
+    background-size: 211px 77px;
+    height: 134px;
+    width: 100%;
+    background-position: 22%;
+    border-bottom: 2px solid #988642;
+}
+
+.section h1{
+    padding-top: 10px;
+}
+
+
+#app {
+    display: flex;
+}
+
+html {
+    background: #324672 url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIxLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA5MCA5OC4xIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA5MCA5OC4xOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6bm9uZTt9Cgkuc3Qxe2ZpbGw6bm9uZTtzdHJva2U6I0ZGRkZGRjtzdHJva2Utd2lkdGg6MztzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cgkuc3Qye2NsaXAtcGF0aDp1cmwoI1NWR0lEXzJfKTtmaWxsOnVybCgjTmV3X1BhdHRlcm5fOCk7c3Ryb2tlOiM5Qzg3MzY7c3Ryb2tlLXdpZHRoOjM7c3Ryb2tlLW1pdGVybGltaXQ6MTA7fQo8L3N0eWxlPgo8cGF0dGVybiAgeD0iLTI3MCIgeT0iLTEzNzIiIHdpZHRoPSI5MCIgaGVpZ2h0PSI5OCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgaWQ9Ik5ld19QYXR0ZXJuXzgiIHZpZXdCb3g9IjkwIC0xMzcuOCA5MCA5OCIgc3R5bGU9Im92ZXJmbG93OnZpc2libGU7Ij4KCTxnPgoJCTxyZWN0IHg9IjkwIiB5PSItMTM3LjgiIGNsYXNzPSJzdDAiIHdpZHRoPSI5MCIgaGVpZ2h0PSI5OCIvPgoJCTxnPgoJCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMjIzLjYtMzkuOWMtMzMuMSwwLTQzLjUtMzQuNS00My41LTM0LjVsMCwwYzAsMC0xMC40LDM0LjUtNDMuNSwzNC41djAuMmMzMy4xLDAsNDMuNSwzNC41LDQzLjUsMzQuNWwwLDAKCQkJCWMwLDAsMTAuNC0zNC41LDQzLjUtMzQuNVYtMzkuOXoiLz4KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTE2Ni01MiIvPgoJCTwvZz4KCQk8Zz4KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTEzMy42LTM5LjlDMTAwLjUtMzkuOSw5MC03NC40LDkwLTc0LjRsMCwwYzAsMC0xMC40LDM0LjUtNDMuNSwzNC41djAuMkM3OS42LTM5LjcsOTAtNS4yLDkwLTUuMmwwLDAKCQkJCWMwLDAsMTAuNC0zNC41LDQzLjUtMzQuNVYtMzkuOXoiLz4KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTkwLjItNzQuMSIvPgoJCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTA0LjQtNTEuNSIvPgoJCTwvZz4KCQk8Zz4KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTI2OC42LTg4LjljLTMzLjEsMC00My41LTM0LjUtNDMuNS0zNC41bDAsMGMwLDAtMTAuNCwzNC41LTQzLjUsMzQuNXYwLjJjMzMuMSwwLDQzLjUsMzQuNSw0My41LDM0LjVsMCwwCgkJCQljMCwwLDEwLjQtMzQuNSw0My41LTM0LjVWLTg4Ljl6Ii8+CgkJPC9nPgoJCTxnPgoJCQk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNMTc4LjYtODguOWMtMzMuMSwwLTQzLjUtMzQuNS00My41LTM0LjVsMCwwYzAsMC0xMC40LDM0LjUtNDMuNSwzNC41djAuMmMzMy4xLDAsNDMuNSwzNC41LDQzLjUsMzQuNWwwLDAKCQkJCWMwLDAsMTAuNC0zNC41LDQzLjUtMzQuNVYtODguOXoiLz4KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTEzNS4yLTU1LjMiLz4KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTEzNS4yLTEyMy4xIi8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMzUuMi01NC44Ii8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMjEtMTAxIi8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMzUuMi01NC44Ii8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xNDkuNC0xMDAuNSIvPgoJCTwvZz4KCQk8Zz4KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTg4LjYtODguOWMtMzMuMSwwLTQzLjUtMzQuNS00My41LTM0LjVsMCwwYzAsMC0xMC40LDM0LjUtNDMuNSwzNC41djAuMkMzNC42LTg4LjcsNDUtNTQuMiw0NS01NC4ybDAsMAoJCQkJYzAsMCwxMC40LTM0LjUsNDMuNS0zNC41Vi04OC45eiIvPgoJCTwvZz4KCQk8Zz4KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTIyMy42LTEzNy45Yy0zMy4xLDAtNDMuNS0zNC41LTQzLjUtMzQuNWwwLDBjMCwwLTEwLjQsMzQuNS00My41LDM0LjV2MC4yYzMzLjEsMCw0My41LDM0LjUsNDMuNSwzNC41bDAsMAoJCQkJYzAsMCwxMC40LTM0LjUsNDMuNS0zNC41Vi0xMzcuOXoiLz4KCQk8L2c+CgkJPGc+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0xMzMuNi0xMzcuOWMtMzMuMSwwLTQzLjUtMzQuNS00My41LTM0LjVsMCwwYzAsMC0xMC40LDM0LjUtNDMuNSwzNC41djAuMmMzMy4xLDAsNDMuNSwzNC41LDQzLjUsMzQuNWwwLDAKCQkJCWMwLDAsMTAuNC0zNC41LDQzLjUtMzQuNVYtMTM3Ljl6Ii8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik05MC4yLTEwNC4zIi8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik05MC4yLTEwMy44Ii8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik05MC4yLTEwMy44Ii8+CgkJPC9nPgoJPC9nPgo8L3BhdHRlcm4+CjxnPgoJPGRlZnM+CgkJPHJlY3QgaWQ9IlNWR0lEXzFfIiB3aWR0aD0iOTAiIGhlaWdodD0iOTguMSIvPgoJPC9kZWZzPgoJPGNsaXBQYXRoIGlkPSJTVkdJRF8yXyI+CgkJPHVzZSB4bGluazpocmVmPSIjU1ZHSURfMV8iICBzdHlsZT0ib3ZlcmZsb3c6dmlzaWJsZTsiLz4KCTwvY2xpcFBhdGg+Cgk8cmVjdCB4PSItOTYuMiIgeT0iLTI2LjciIGNsYXNzPSJzdDIiIHdpZHRoPSIxNjA0NCIgaGVpZ2h0PSI2ODM1Ii8+CjwvZz4KPC9zdmc+Cg==) repeat;
+    background-size: 60px;
+}
+
+.section {
+    background-color: white;
+    width: 50%;
+    margin-top: 0px;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    font-weight: 100;
+    line-height: 19.2px
+}
+
+.section img{
+    width: -moz-available;
+}
+
+.btn {
+    background: #b10f26!important;
+    letter-spacing: .05rem;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #808080;
+    border: 0px #ed8b00 solid;
+    border-color: transparent transparent #ed8b00;
+    cursor: pointer;
+}
+
+.btn span::after,
+.cta span::before {
+    position: absolute;
+    top: -9px;
+    border-width: 0 9px 14px;
+}
+
+.btn span::after {
+    left: -15px;
+}
+        </style>
+</head>
+<body>
+    <div id="app">
+        <div id="BrandLogo"></div>
+        {{#if profile}}
+        <div class="content">
+        
+            <div class="section">
+                <p>Welcome to the {{profile.current_sailing.ship}} {{profile.given_name}}.</p>
+            </div>
+        
+            <div class="section">
+                    <h1>Your Cabin</h1>
+                    <p>You are staying in cabin {{profile.current_sailing.cabin}}</p>
+            </div>
+        
+            {{#if profile.ageVerified}}
+                <div class="section">
+                    <h1>Gaming</h1>
+                    <p>Thank you for verifying your age you can now access gaming services.</p>
+                </div>
+                {{#else}}
+                <div class="section">
+                    <h1>Age Verified Services</h1>
+                    <p>Please see an on board staff member to verify your age to access these services.</p>
+                </div>
+                {{/else}}
+            {{/if}}
+        
+            <div class="section">
+                    <h1>Peninsular</h1>
+                    <p>You current Peninsular tier is <b>{{profile.tier}}</b>. You have a <b>{{profile.spendDiscount}}</b> discount on your onboard spend.</p>
+            </div>
+        
+            <div class="section">
+                <a href="/logout"><button class="btn" type="button"><span>Logout</span></button></a>
+            </div>
+        {{else}}
+        <div class="content">
+            <div class="section">
+                <div class="first-component">
+<div class="react-component hero" id="hero" data-id="hero-83238606359883" data-type="hero"><div class="hero-container  search-enabled hero-enabled  recent-search-variation"><h1 class="sr-only page-title">Black Friday Savings</h1><div class="hero-content"><a href="https://www.pocruises.com/deals/black-friday" data-link-text="Video" data-eclipse-id="e696:video" class="e696-video__container">
+    <video poster="https://www.pocruises.com/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-DESKTOP-2880x1000.png" autoplay="" playsinline="" loop="" muted="" preload="auto" class="e696-video" data-eclipse-id="">
+      <source src="https://www.pocruises.com/imagesnetstorage/marketing-assets/videos/BF-23-DESKTOP-2880x1000.mp4" type="video/mp4">
+    </video>
+  <picture class="e696-video__picture e696-hide">
+  <source srcset="
+      https://www.pocruises.com/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-DESKTOP-2880x1000.png.image.1440.523.high.png 1x,
+      https://www.pocruises.com/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-DESKTOP-2880x1000.png.image.2880.1047.high.png 2x" media="(min-width: 1025px)">
+  <source srcset="
+  https://www.pocruises.com/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-TABLET-2048x1536.png.image.1024.768.medium.png 1x,
+  https://www.pocruises.com/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-TABLET-2048x1536.png.image.2048.1536.medium.png 2x" media="(min-width: 768px)">
+  <source srcset="
+  https://www.pocruises.com/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-MOBILE-1280x1432.png.image.500.668.medium.png 1x,
+  https://www.pocruises.com/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-MOBILE-1280x1432.png.image.500.668.medium.png 2x" media="(min-width: 0px)">
+  <img src="https://www.pocruises.com/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-DESKTOP-2880x1000.png.image.1440.523.high.png" alt="Save up to 30% with our Black Friday offers~" height="500" class="e696-hero__image">
+    </picture>
+    <div class="e696-control-container">
+  <div style="display: none;" id="e696-icons-video">
+        <svg xmlns="http://www.w3.org/2000/svg">
+
+        <symbol viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" id="e696-icon:play">
+<path d="M22 3.125C25.7084 3.125 29.3335 4.22467 32.417 6.28495C35.5004 8.34522 37.9036 11.2736 39.3228 14.6997C40.7419 18.1258 41.1132 21.8958 40.3897 25.5329C39.6663 29.1701 37.8805 32.511 35.2583 35.1333C32.636 37.7555 29.2951 39.5413 25.658 40.2647C22.0208 40.9882 18.2508 40.6169 14.8247 39.1977C11.3986 37.7786 8.47023 35.3754 6.40996 32.2919C4.34968 29.2085 3.25001 25.5834 3.25001 21.875C3.25001 16.9022 5.22545 12.1331 8.74176 8.61675C12.2581 5.10044 17.0272 3.125 22 3.125ZM22 0C17.6735 0 13.4442 1.28295 9.84691 3.6866C6.24959 6.09026 3.44581 9.50667 1.79015 13.5038C0.134478 17.5009 -0.29872 21.8993 0.545332 26.1426C1.38938 30.3859 3.47278 34.2837 6.53205 37.343C9.59132 40.4022 13.4891 42.4856 17.7324 43.3297C21.9757 44.1737 26.3741 43.7405 30.3712 42.0849C34.3683 40.4292 37.7848 37.6254 40.1884 34.0281C42.5921 30.4308 43.875 26.2015 43.875 21.875C43.875 16.0734 41.5703 10.5094 37.468 6.40704C33.3656 2.30468 27.8016 0 22 0Z" fill="currentColor"></path>
+<path d="M31.0909 21L17.4545 30.8411V11.1588L31.0909 21Z" fill="currentColor"></path>
+</symbol>
+
+<symbol viewBox="0 0 44 44" fill="currentColor" xmlns="http://www.w3.org/2000/svg" id="e696-icon:pause">
+<path d="M18.875 12.625H15.75V31.375H18.875V12.625Z" fill="currentColor"></path>
+<path d="M28.25 12.625H25.125V31.375H28.25V12.625Z" fill="currentColor"></path>
+<path d="M22 3.25C25.7084 3.25 29.3335 4.34967 32.417 6.40995C35.5004 8.47022 37.9036 11.3986 39.3228 14.8247C40.7419 18.2508 41.1132 22.0208 40.3897 25.6579C39.6663 29.2951 37.8805 32.636 35.2583 35.2583C32.636 37.8805 29.2951 39.6663 25.658 40.3897C22.0208 41.1132 18.2508 40.7419 14.8247 39.3227C11.3986 37.9036 8.47023 35.5004 6.40996 32.4169C4.34968 29.3335 3.25001 25.7084 3.25001 22C3.25001 17.0272 5.22545 12.2581 8.74176 8.74175C12.2581 5.22544 17.0272 3.25 22 3.25ZM22 0.125C17.6735 0.125 13.4442 1.40795 9.84691 3.8116C6.24959 6.21526 3.44581 9.63167 1.79015 13.6288C0.134478 17.6259 -0.29872 22.0243 0.545332 26.2676C1.38938 30.5109 3.47278 34.4087 6.53205 37.468C9.59132 40.5272 13.4891 42.6106 17.7324 43.4547C21.9757 44.2987 26.3741 43.8655 30.3712 42.2099C34.3683 40.5542 37.7848 37.7504 40.1884 34.1531C42.5921 30.5558 43.875 26.3265 43.875 22C43.875 16.1984 41.5703 10.6344 37.468 6.53204C33.3656 2.42968 27.8016 0.125 22 0.125Z" fill="currentColor"></path>
+      </symbol>
+
+
+        </svg>
+     </div>
+          <button class="e696-control e696-hide" data-eclipse-action="e696:pause">
+
+          <svg xmlns="http://www.w3.org/2000/svg" focusable="false" class="e696-button-play" aria-labelledby="e696-control-label-play">
+             <title id="e696-control-label-play">Play Video</title>
+             <use xlink:href="#e696-icon:play"></use>
+          </svg>
+
+          <svg xmlns="http://www.w3.org/2000/svg" focusable="false" class="e696-button-pause" aria-labelledby="e696-control-label-pause">
+            <title id="e696-control-label-pause">Pause Video</title>
+             <use xlink:href="#e696-icon:pause"></use>
+          </svg>
+
+          </button>
+        </div>
+  </a>
+  <div class="hero-slides"><div class="slick-initialized slick-slider"><div class="slick-list"><div class="slick-track" style="opacity: 1; transform: translate3d(0px, 0px, 0px);"><div data-index="0" class="slick-slide slick-active" tabindex="-1" style="outline: none; width: 0px;"><div class="slide" tabindex="0" role="none" aria-valuemin="1" aria-valuenow="1" aria-valuemax="1" aria-labelledby="info-card-positioning0" data-click-track="true"><div><a href="https://www.pocruises.com/deals/black-friday" aria-label="  " tabindex="-1" class="slide-image-cta"><div class="image-container"><div class="image-lazy-loader lazy-loading-disabled"><picture><source srcset="/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-DESKTOP-2880x1000.png.image.1440.523.high.png 1x,/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-DESKTOP-2880x1000.png.image.2880.1047.high.png 2x" media="(min-width: 1025px)"><source srcset="/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-TABLET-2048x1536.png.image.1024.768.medium.png 1x,/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-TABLET-2048x1536.png.image.2048.1536.medium.png 2x" media="(min-width: 768px)"><source srcset="/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-MOBILE-1280x1432.png.image.320.358.low.png 1x,/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-MOBILE-1280x1432.png.image.640.716.low.png 2x" media="(min-width: 0px)"><img src="/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-MOBILE-1280x1432.png.image.640.716.low.png" class="" alt=""></picture></div></div></a></div><div id="info-card-positioning0" class="info-card-positioning   none"><div class="info-card-wrap grid-wrap alignment-left"><div class="info-card left "><div class="info-section " style="text-align: left;"><h2 style="text-shadow: rgb(0, 0, 0) 1px 1px 1px;"></h2><div class="title-description" style="text-shadow: rgb(0, 0, 0) 1px 1px 1px;"><p></p></div><div class="detail-section" style="text-align: left;"></div></div></div></div></div></div></div></div></div></div></div><div class="search-positioning  search-box-down"><div class="search-holder grid-wrap none" data-componentname="searchBar"><div class="search-bar accordion-view"><div class="svp-container"><h2 class="search-title">Find your perfect cruise</h2><button class="search-cta search-cta-svp-btn">Search</button></div><div class="search-overlay  " style="display: none"><div class="overlay-header"><div class="header-title"><span class="caret-left"></span><span class="header-text">Find your cruise</span></div><button tabindex="0" class="close-btn" data-linktext="Close"><span class="sr-only">Close</span></button></div><div class="overlay-filter-container"><ul role="menubar" class="search-list"><li class="filter-border " role="none"><button role="menuitem" aria-expanded="false" aria-haspopup="true" aria-label="Which destination? " class="filter-item item-container  destinations " tabindex="0" data-linktext="menuitem : Which destination? "><div class="filter-inner-container"><span class="dropdown-title">Which destination? <span class="colon">:</span></span><span class="icon-caret"></span></div></button><span aria-live="polite" class="sr-only"></span></li><li class="filter-border " role="none"><button role="menuitem" aria-expanded="false" aria-haspopup="true" aria-label="Which month(s)? " class="filter-item item-container  months " tabindex="0" data-linktext="menuitem : Which month(s)? "><div class="filter-inner-container"><span class="dropdown-title">Which month(s)? <span class="colon">:</span></span><span class="icon-caret"></span></div></button><span aria-live="polite" class="sr-only"></span></li><li class="filter-border " role="none"><button role="menuitem" aria-expanded="false" aria-haspopup="true" aria-label="How long for? " class="filter-item item-container  durations " tabindex="0" data-linktext="menuitem : How long for? "><div class="filter-inner-container"><span class="dropdown-title">How long for? <span class="colon">:</span></span><span class="icon-caret"></span></div></button><span aria-live="polite" class="sr-only"></span></li><li class="filter-border " role="none"><button role="menuitem" aria-expanded="false" aria-haspopup="true" aria-label="Which ship? " class="filter-item item-container  ships " tabindex="0" data-linktext="menuitem : Which ship? "><div class="filter-inner-container"><span class="dropdown-title">Which ship? <span class="colon">:</span></span><span class="icon-caret"></span></div></button><span aria-live="polite" class="sr-only"></span></li></ul></div><div class="searchByCruiseCodeContanier"><span class="h5 searchByCruiseCodeLabel" tabindex="0"> Search By Cruise Code </span><div class="searchInputAndCtaWrapper"><input placeholder="" type="text" class="searchByCruiseCodeInput" maxlength="6"><a href="javascript:void(0)" role="button" class="cta-secondary searchByCruiseCodeLink " data-linktext="button : Search">Search</a></div></div><button class="search-cta-btn ">View All Results</button><button class="overlay-cta-close ">View All Results</button></div><div class="inner-container"><ul role="menubar" class="" aria-busy="true"><li class="filter-border " role="none"><button role="menuitem" aria-expanded="false" aria-haspopup="true" aria-label="Which destination? " class="filter-item item-container  destinations " tabindex="0" data-linktext="menuitem : Which destination? "><div class="filter-inner-container"><span class="dropdown-title">Which destination? <span class="colon">:</span></span><span class="icon-caret"></span></div></button><span aria-live="polite" class="sr-only"></span></li><li class="filter-border " role="none"><button role="menuitem" aria-expanded="false" aria-haspopup="true" aria-label="Which month(s)? " class="filter-item item-container  months " tabindex="0" data-linktext="menuitem : Which month(s)? "><div class="filter-inner-container"><span class="dropdown-title">Which month(s)? <span class="colon">:</span></span><span class="icon-caret"></span></div></button><span aria-live="polite" class="sr-only"></span></li><li class="filter-border " role="none"><button role="menuitem" aria-expanded="false" aria-haspopup="true" aria-label="How long for? " class="filter-item item-container  durations " tabindex="0" data-linktext="menuitem : How long for? "><div class="filter-inner-container"><span class="dropdown-title">How long for? <span class="colon">:</span></span><span class="icon-caret"></span></div></button><span aria-live="polite" class="sr-only"></span></li><li class="filter-border " role="none"><button role="menuitem" aria-expanded="false" aria-haspopup="true" aria-label="Which ship? " class="filter-item item-container  ships " tabindex="0" data-linktext="menuitem : Which ship? "><div class="filter-inner-container"><span class="dropdown-title">Which ship? <span class="colon">:</span></span><span class="icon-caret"></span></div></button><span aria-live="polite" class="sr-only"></span></li><li class="filter-border search-button" role="none"><button tabindex="0" class="search-cta-btn " aria-disabled="false">Search</button></li></ul></div></div><div class="recent-search-container "><div class="recent-search-header"><div class="drawer-cta-holder"><button tabindex="0" class="accordion-item-title" aria-expanded="false" data-linktext="You have 0 recent searches">You have 0 recent searches</button></div></div><div class="recent-search-drawer" aria-modal="true" role="alertdialog"><div class="drawer-header"><div class="drawer-title">You have 0 recent searches</div><div class="close-drawer-container"><button aria-label="Close" class="close-btn" data-linktext="Close"><span class="close-label">Close</span></button></div></div><div class="title-bar"><div class="drawer-cta-holder"><button tabindex="0" class="accordion-item-title" aria-expanded="false" data-linktext="You have 0 recent searches">You have 0 recent searches</button></div></div><div class="drawer-body"><div class="recent-list"><div class="no-recent-search"><h4 class="no-search-title">You have no recent searches </h4><p class="no-search-desc">You have no recent searches </p></div></div></div><div class="close-drawer-container"><button aria-label="Close" class="close-btn" data-linktext="Close"><span class="close-label">Close</span></button></div></div></div></div></div></div></div></div>
+</div>
+            </div>
+        
+            <div class="section">
+            <a href="/protected"><button class="btn" type="button"><span>Login</span></button></a>
+            </div>
+        </div>
+        {{/if}}    
+    </div>
+</body>
+</html>
