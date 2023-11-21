@@ -180,6 +180,15 @@ html {
     line-height: 19.2px
 }
 
+.section-hero {
+    background-color: white;
+    margin-top: 0px;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    font-weight: 100;
+    line-height: 19.2px
+}
+
 .section img{
     width: -moz-available;
 }
@@ -220,7 +229,14 @@ html {
 </head>
 <body>
     <div id="app">
-        <div id="BrandLogo"></div>
+        <div id="BrandLogo">
+            {{#if profile}}
+                <a href="/protected"><button class="btn" type="button"><span>Login</span></button></a>
+                {{#else}}
+                <a href="/logout"><button class="btn" type="button"><span>Logout</span></button></a>
+                {{/else}}
+            {{/if}}
+        </div>
         {{#if profile}}
         <div class="content">
         
@@ -256,14 +272,10 @@ html {
             </div>
         {{else}}
         <div class="content">
-            <div class="section">
+            <div class="section-hero">
                 <video poster="https://www.pocruises.com/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-DESKTOP-2880x1000.png" autoplay="" playsinline="" loop="" muted="" preload="auto" class="e696-video" data-eclipse-id="">
                     <source src="https://www.pocruises.com/imagesnetstorage/marketing-assets/videos/BF-23-DESKTOP-2880x1000.mp4" type="video/mp4">
                 </video>
-            </div>
-        
-            <div class="section">
-                <a href="/protected"><button class="btn" type="button"><span>Login</span></button></a>
             </div>
         </div>
         {{/if}}    
