@@ -234,7 +234,6 @@ html {
                 <a href="/logout"><button class="btn" type="button"><span>Logout</span></button></a>
                 {{else}}
                 <a href="/protected"><button class="btn" type="button"><span>Login</span></button></a>
-                {{/else}}
             {{/if}}
         </div>
         {{#if profile}}
@@ -254,7 +253,7 @@ html {
                     <h1>Gaming</h1>
                     <p>Thank you for verifying your age you can now access gaming services.</p>
                 </div>
-                {{else}}
+                {{#else}}
                 <div class="section">
                     <h1>Age Verified Services</h1>
                     <p>Please see an on board staff member to verify your age to access these services.</p>
