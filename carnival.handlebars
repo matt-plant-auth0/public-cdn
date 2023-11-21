@@ -229,14 +229,10 @@ html {
 </head>
 <body>
     <div id="app">
-        <div id="BrandLogo">
-            {{#if profile}}
-                <a href="/logout"><button class="btn" type="button"><span>Logout</span></button></a>
-                {{else}}
-                <a href="/protected"><button class="btn" type="button"><span>Login</span></button></a>
-            {{/if}}
-        </div>
         {{#if profile}}
+        <div id="BrandLogo">
+            <a href="/logout"><button class="btn" type="button"><span>Logout</span></button></a>
+        </div>
         <div class="content">
         
             <div class="section">
@@ -270,6 +266,9 @@ html {
                 <a href="/logout"><button class="btn" type="button"><span>Logout</span></button></a>
             </div>
         {{else}}
+        <div id="BrandLogo">
+            <a href="/protected"><button class="btn" type="button"><span>Login</span></button></a>
+        </div>
         <div class="content">
             <div class="section-hero">
                 <video poster="https://www.pocruises.com/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-DESKTOP-2880x1000.png" autoplay="" playsinline="" loop="" muted="" preload="auto" class="e696-video" data-eclipse-id="">
