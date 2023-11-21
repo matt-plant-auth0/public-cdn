@@ -245,7 +245,7 @@ html {
     <div id="app">
         {{#if profile}}
         <div id="BrandLogo">
-            <a href="/logout"><button class="btn" type="button"><span>Logout</span></button></a>
+            <a href="/logout"><button class="btn btn-top-bar" type="button"><span>Logout</span></button></a>
         </div>
         <div class="content">
         
@@ -274,10 +274,6 @@ html {
             <div class="section">
                     <h1>Peninsular</h1>
                     <p>You current Peninsular tier is <b>{{profile.tier}}</b>. You have a <b>{{profile.spendDiscount}}</b> discount on your onboard spend.</p>
-            </div>
-        
-            <div class="section">
-                <a href="/logout"><button class="btn" type="button"><span>Logout</span></button></a>
             </div>
         {{else}}
         <div id="BrandLogo">
