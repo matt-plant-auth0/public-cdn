@@ -250,12 +250,12 @@ html {
         <div class="content">
         
             <div class="section">
-                <p>Welcome to the {{profile.current_sailing.ship}} {{profile.given_name}}.</p>
+                <p>Welcome to the {{profile.current_sailing_ship}} {{profile.given_name}}.</p>
             </div>
         
             <div class="section">
                     <h1>Your Cabin</h1>
-                    <p>You are staying in cabin {{profile.current_sailing.cabin}}</p>
+                    <p>You are staying in cabin {{profile.current_sailing_cabin}}</p>
             </div>
         
             {{#if profile.ageVerified}}
@@ -263,12 +263,11 @@ html {
                     <h1>Gaming</h1>
                     <p>Thank you for verifying your age you can now access gaming services.</p>
                 </div>
-                {{#else}}
+                {{else}}
                 <div class="section">
                     <h1>Age Verified Services</h1>
                     <p>Please see an on board staff member to verify your age to access these services.</p>
                 </div>
-                {{/else}}
             {{/if}}
         
             <div class="section">
