@@ -263,7 +263,17 @@
             <a href="/logout"><button class="btn btn-top-bar" type="button"><span>Logout</span></button></a>
         </div>
         <div class="content">
+            {{#if profile.booking_not_found}}
+            <div class="section">
+                <p>Welcome to P&amp;O Cruises {{profile.given_name}}.</p>
+            </div>
 
+            <div class="section">
+                <h1>Booking Not Found</h1>
+                <p>Unfortunately we couldn't find your booking in our system - please contact a member of our crew who can help you out!</p>
+            </div>
+
+            {{else}}
             <div class="section">
                 <p>Welcome to the {{profile.current_sailing_ship}} {{profile.given_name}}.</p>
             </div>
@@ -290,7 +300,8 @@
                 <p>You current Peninsular tier is <b>{{profile.tier}}</b>. You have a <b>{{profile.spendDiscount}}</b>
                     discount on your onboard spend.</p>
             </div>
-            {{else}}
+            {{/if}}
+        {{else}}
             <div id="BrandLogo">
                 <a href="/protected"><button class="btn btn-top-bar" type="button"><span>Login</span></button></a>
             </div>
@@ -460,7 +471,7 @@
                     </div>
                 </div>
             </div>
-            {{/if}}
+        {{/if}}
         </div>
 </body>
 
