@@ -297,9 +297,27 @@
 
             <div class="section">
                 <h1>Peninsular</h1>
-                <p>You current Peninsular tier is <b>{{profile.tier}}</b>. You have a <b>{{profile.spendDiscount}}</b>
+                <p>You current Peninsular tier is <b>{{profile.tier}}</b>. You have a <b>{{profile.spend_discount}}</b>
                     discount on your onboard spend.</p>
             </div>
+
+            {{#if profile.lead_booker}}
+            <div class="section">
+                <h1>Your Party</h1>
+                <p>Here are the other members of your party associated with this booking.</p>
+                <ul>
+                    <li>Booking ref: {{profile.associated_booking_ref}}</li>
+                    <li>Email: {{profile.associated_booking_email}}</li>
+                </ul>
+                <p>Should your party members have any issues please user their unique booking ref when contacting us</p>
+            </div>
+            {{else if profile.associated_booking_email}}
+            <div class="section">
+                <h1>Your Lead Booker</h1>
+                <p>Your booking is associated with another booking - please contact <b>{{profile.associated_booking_email}}</b> if you have any issues</p>
+            </div>
+            {{/if}}
+
             {{/if}}
         {{else}}
             <div id="BrandLogo">
