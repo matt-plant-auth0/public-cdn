@@ -270,7 +270,8 @@
 
             <div class="section">
                 <h1>Booking Not Found</h1>
-                <p>Unfortunately we couldn't find your booking in our system - please contact a member of our crew who can help you out!</p>
+                <p>Unfortunately we couldn't find your booking in our system - please contact a member of our crew who
+                    can help you out!</p>
             </div>
 
             {{else}}
@@ -314,30 +315,70 @@
             {{else if profile.associated_booking_email}}
             <div class="section">
                 <h1>Your Lead Booker</h1>
-                <p>Your booking is associated with another booking - please contact <b>{{profile.associated_booking_email}}</b> if you have any issues</p>
+                <p>Your booking is associated with another booking - please contact
+                    <b>{{profile.associated_booking_email}}</b> if you have any issues</p>
             </div>
             {{/if}}
 
             {{/if}}
-        {{else}}
+            {{else}}
             <div id="BrandLogo">
                 <a href="/protected"><button class="btn btn-top-bar" type="button"><span>Login</span></button></a>
             </div>
             <div class="content">
                 <div class="section-hero">
-                    <div class="hero-content"><a href="https://www.pocruises.com/deals/black-friday"
-                            data-link-text="Video" data-eclipse-id="e696:video" class="e696-video__container">
-                            <video
-                                poster="https://www.pocruises.com/content/dam/po/marketing-assets/campaigns/black-friday-2023/hp/BF-23-DESKTOP-2880x1000.png"
-                                autoplay="" playsinline="" loop="" muted="" preload="auto" class="e696-video"
-                                data-eclipse-id="">
-                                <source
-                                    src="https://www.pocruises.com/imagesnetstorage/marketing-assets/videos/BF-23-DESKTOP-2880x1000.mp4"
-                                    type="video/mp4">
-                            </video>
-
-
-                        </a>
+                    <div class="hero-content">
+                        <div class="hero-slides">
+                            <div class="slick-initialized slick-slider">
+                                <div class="slick-list">
+                                    <div class="slick-track"
+                                        style="opacity: 1; transform: translate3d(0px, 0px, 0px); width: 5760px;">
+                                        <div data-index="0" class="slick-slide slick-active" tabindex="-1"
+                                            style="outline: none; width: 1920px;">
+                                            <div class="slide" tabindex="0" role="none" aria-valuemin="1"
+                                                aria-valuenow="1" aria-valuemax="1"
+                                                aria-labelledby="info-card-positioning0" data-click-track="true">
+                                                <div><a href="https://www.pocruises.com/deals/on-board-spending-money-on-us"
+                                                        aria-label="  " tabindex="-1" class="slide-image-cta">
+                                                        <div class="image-container">
+                                                            <div class="image-lazy-loader lazy-loading-disabled">
+                                                                <picture>
+                                                                    <source
+                                                                        srcset="/content/dam/po/marketing-assets/campaigns/sep-nov23/D23-007-11%20Nov%20Med%20Arvia%20RTTL%20desktop%20banner_V2.png.image.1440.523.high.png 1x,/content/dam/po/marketing-assets/campaigns/sep-nov23/D23-007-11%20Nov%20Med%20Arvia%20RTTL%20desktop%20banner_V2.png.image.2880.1047.high.png 2x"
+                                                                        media="(min-width: 1025px)">
+                                                                    <source
+                                                                        srcset="/content/dam/po/marketing-assets/campaigns/sep-nov23/D23-007-11%20Nov%20Med%20Arvia%20RTTL%20Tablet%20banner_V2.png.image.1024.768.medium.png 1x,/content/dam/po/marketing-assets/campaigns/sep-nov23/D23-007-11%20Nov%20Med%20Arvia%20RTTL%20Tablet%20banner_V2.png.image.2048.1536.medium.png 2x"
+                                                                        media="(min-width: 768px)">
+                                                                    <source
+                                                                        srcset="/content/dam/po/marketing-assets/campaigns/sep-nov23/D23-007-11%20Nov%20Med%20Arvia%20RTTL%20Mobile%20banner_V2.png.image.320.358.low.png 1x,/content/dam/po/marketing-assets/campaigns/sep-nov23/D23-007-11%20Nov%20Med%20Arvia%20RTTL%20Mobile%20banner_V2.png.image.640.716.low.png 2x"
+                                                                        media="(min-width: 0px)"><img
+                                                                        src="/content/dam/po/marketing-assets/campaigns/sep-nov23/D23-007-11%20Nov%20Med%20Arvia%20RTTL%20Mobile%20banner_V2.png.image.640.716.low.png"
+                                                                        class="" alt="">
+                                                                </picture>
+                                                            </div>
+                                                        </div>
+                                                    </a></div>
+                                                <div id="info-card-positioning0" class="info-card-positioning   none">
+                                                    <div class="info-card-wrap grid-wrap alignment-left">
+                                                        <div class="info-card left ">
+                                                            <div class="info-section " style="text-align: left;">
+                                                                <h2 style="text-shadow: rgb(0, 0, 0) 1px 1px 1px;"></h2>
+                                                                <div class="title-description"
+                                                                    style="text-shadow: rgb(0, 0, 0) 1px 1px 1px;">
+                                                                    <p></p>
+                                                                </div>
+                                                                <div class="detail-section" style="text-align: left;">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="search-positioning  search-box-down">
                             <div class="search-holder grid-wrap none" data-componentname="searchBar">
                                 <div class="search-bar accordion-view">
@@ -489,7 +530,7 @@
                     </div>
                 </div>
             </div>
-        {{/if}}
+            {{/if}}
         </div>
 </body>
 
