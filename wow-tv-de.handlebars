@@ -4002,27 +4002,21 @@
                                             </ul>
                                         </div>
                                         <div data-testid="MenusSectionDropdown-Non-MobileOnly"
-                                            class="displaymixins__ForDesktopOnly-sc-ik19f4-4 iBFoCU"><button
+                                            class="displaymixins__ForDesktopOnly-sc-ik19f4-4 iBFoCU">
+                                            {{#if profile}}
+                                            <a
                                                 aria-haspopup="true" aria-controls="Desktop-mein-konto"
                                                 data-testid="MenusSectionItem-desktop-mein-konto" aria-expanded="false"
                                                 data-tracking-label="Mein Konto"
-                                                class="menustyles__MenusSectionItemLabel-sc-7ns343-4 cdpyFK">Mein
-                                                Konto</button>
-                                            <ul id="Desktop-mein-konto" data-testid="Desktop-mein-konto"
-                                                aria-hidden="true"
-                                                class="dropdown-desktop__DropdownDesktop-sc-1o8msrm-0 dIdeBs">
-                                                <li data-testid="desktop-1-d-060-a-2-e-0723-11-ec-951-d-7-f-75745-a-0-d-5-a"
-                                                    class="list-item-linkstyles__ListItem-sc-1qd283t-1 gXXBNZ"><a
-                                                        tabindex="-1" color="#FFFFFF"
-                                                        href="https://www.wowtv.de/konto/uebersicht"
-                                                        id="desktop-1-d-060-a-2-e-0723-11-ec-951-d-7-f-75745-a-0-d-5-a"
-                                                        class="list-item-linkstyles__ListItemLink-sc-1qd283t-0 kYzHjh">Kontoübersicht</a>
-                                                </li>
-                                                <li class="menustyles__ButtonWrapper-sc-7ns343-5 kNUjZJ"><a
-                                                        href="/protected" data-testid="desktop-sign-in" tabindex="-1"
-                                                        class="buttonstyles__Button-sc-112oxl9-0 lakDgO">Anmelden</a>
-                                                </li>
-                                            </ul>
+                                                class="menustyles__MenusSectionItemLabel-sc-7ns343-4 cdpyFK" href="/logout">Abmelden</a>
+                                            {{else}}
+                                            <a
+                                                aria-haspopup="true" aria-controls="Desktop-mein-konto"
+                                                data-testid="MenusSectionItem-desktop-mein-konto" aria-expanded="false"
+                                                data-tracking-label="Mein Konto"
+                                                class="menustyles__MenusSectionItemLabel-sc-7ns343-4 cdpyFK" href="/protected">Mein
+                                                Konto</a>
+                                            {{/if}}
                                         </div>
                                     </li>
                                     <li class="menustyles__MenusSectionItem-sc-7ns343-1 fnPuSj">
