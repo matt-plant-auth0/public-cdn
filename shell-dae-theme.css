@@ -3,11 +3,22 @@ header.dashboard-header {
     border-bottom-color: #235097 !important;
   }
   
-  .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-    color: #000 !important;
+  .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover, .username-text {
+    color: #ffffff !important;
   }
   
   header.dashboard-header nav #header {
     background-size: 50px 40px !important;
     background-image: url("https://support.shell.com/hc/theming_assets/01HZPN8G19J8JQW2PJ5A4PC9MF") !important;
   }
+
+.btn-success, .theme-dark .btn-success {
+    color: #000 !important;
+    background-color: #FBCE07 !important;
+    border-color: #FBCE07 !important;
+}
+
+.btn-success:hover, .theme-dark .btn-success:hover {
+    background-color: #404040 !important;
+    color: #FBCE07 !important;
+}
