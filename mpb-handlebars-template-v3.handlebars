@@ -274,7 +274,7 @@
     clientID:     'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv'
   });
 
-  let username = `mpb_anon_${uuidv4()}`;
+  let username = uuidv4();
 
   if(username.length > 15){
     username = username.substring(0, 14);
