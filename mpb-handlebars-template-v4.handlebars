@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPB Branding | Demo Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --mpb-pink: #FF0081;
+            --mpb-midnight: #020035;
+            --mpb-white: #FFFFFF;
+            --mpb-gray-light: #F2F2F2;
+            --font-stack: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--mpb-white);
+            color: var(--mpb-midnight);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 5%;
+            background: var(--mpb-white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--mpb-gray-light);
+        }
+
+        .logo-svg {
+            height: 24px;
+            fill: var(--mpb-midnight);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--mpb-midnight);
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--mpb-pink);
+        }
+
+        .btn-sell {
+            background-color: var(--mpb-pink);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--mpb-midnight);
+            color: var(--mpb-white);
+            padding: 80px 5%;
+            display: flex;
+            align-items: center;
+            min-height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-text {
+            flex: 1;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 24px;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span {
+            color: var(--mpb-pink);
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 480px;
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+
+        /* Focus Ring Graphic */
+        .focus-ring-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .focus-ring-svg {
+            width: 450px;
+            height: 450px;
+            stroke: var(--mpb-pink);
+            stroke-width: 1.5;
+            fill: none;
+            opacity: 0.9;
+        }
+
+        /* Content Sections */
+        .grid-section {
+            padding: 80px 5%;
+            background: var(--mpb-white);
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--mpb-gray-light);
+            padding: 40px;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 24px;
+        }
+
+        .card-link {
+            font-weight: 700;
+            color: var(--mpb-pink);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Footer Tagline */
+        footer {
+            background-color: var(--mpb-pink);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .tagline {
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; padding-top: 40px; }
+            .hero h1 { font-size: 42px; }
+            .focus-ring-svg { width: 300px; height: 300px; margin-top: 40px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <svg class="logo-svg" viewBox="0 0 100 25">
+                <text x="0" y="20" font-family="Inter" font-weight="900" font-size="22" letter-spacing="-1">MPB</text>
+            </svg>
+        </div>
+        <div class="nav-links">
+            <a href="#">Buy</a>
+            <a href="#">Sell</a>
+            <a href="#">Trade</a>
+            <a href="#">Explore</a>
+            <a href="#" class="btn-sell">Sell your kit</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-text">
+            <h1>The right way to <span>buy, sell and trade</span>.</h1>
+            <p>The circular economy for creative gear. Smarter for you, better for the planet.</p>
+            <a href="#" class="btn-sell" style="padding: 16px 32px; font-size: 18px; font-weight: 700; text-decoration: none;">Get an instant quote</a>
+        </div>
+        <div class="focus-ring-visual">
+            <svg class="focus-ring-svg" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="80" stroke-dasharray="2 4" />
+                <circle cx="100" cy="100" r="95" />
+                <line x1="80" y1="100" x2="120" y2="100" stroke-width="0.5" opacity="0.3"/>
+                <line x1="100" y1="80" x2="100" y2="120" stroke-width="0.5" opacity="0.3"/>
+                <path d="M40,40 L40,30 L50,30" />
+                <path d="M150,40 L160,40 L160,50" />
+                <path d="M40,160 L40,170 L50,170" />
+                <path d="M150,170 L160,170 L160,160" />
+            </svg>
+        </div>
+    </header>
+
+    <section class="grid-section">
+        <h2 class="section-title">Change your kit, change your perspective.</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Buy used gear</h3>
+                <p>Every piece of kit is inspected and approved by our experts. Shop thousands of cameras and lenses.</p>
+                <a href="#" class="card-link">Shop now <span>&rarr;</span></a>
+            </div>
+            <div class="card">
+                <h3>Sell your kit</h3>
+                <p>Get a free instant quote and free insured pickup. Fast, secure payments direct to your bank.</p>
+                <a href="#" class="card-link">Get a quote <span>&rarr;</span></a>
+            </div>
+            <div class="card">
+                <h3>Trade in</h3>
+                <p>Upgrade your setup by trading in your old gear. The simplest way to change your setup.</p>
+                <a href="#" class="card-link">Start a trade <span>&rarr;</span></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="tagline">Secondhand’s got a new brand.</div>
+    </footer>
+<script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
+<script>
+  console.log('Using template version 4')
+
+  function uuidv4() {
+    return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
+      (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
+    );
+  }
+
+  var webAuth = new auth0.WebAuth({
+    domain: 'mpb-demo.oktademo.cloud',
+    clientID: 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv'
+  });
+
+  let username = uuidv4();
+
+  if(username.length > 15){
+    username = username.substring(0, 15);
+  }
+
+  const response = fetch("https://mpb-demo.oktademo.cloud/dbconnections/signup", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({ 
+      clientID: 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv',
+      connection: 'anonymous-users',
+      username: username,
+      app_metadata: { first_visit_timestamp: Date.now() }
+    })
+  }).then(res => {
+    res.json().then(json => {
+      console.log(json);
+      document.cookie = `auth0_anon_session=${username}`;
+      webAuth.login({
+        realm: 'anonymous-users',
+        username: username
+      });
+    })
+  });
+</script>
+</body>
+</html>
