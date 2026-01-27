@@ -261,7 +261,7 @@
     </footer>
 <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
 <script>
-  console.log('Using template version 4')
+  console.log('Using template version 4.1')
 
   function uuidv4() {
     return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
@@ -271,7 +271,9 @@
 
   var webAuth = new auth0.WebAuth({
     domain: 'mpb-demo.oktademo.cloud',
-    clientID: 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv'
+    clientID: 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv',
+    responseType: 'token',
+    audience: 'demonstration'
   });
 
   let username = uuidv4();
@@ -299,7 +301,9 @@
       webAuth.login({
         realm: 'anonymous-users',
         username: username
-      });
+      }).then(res => {
+        console.log(res);
+      })
     })
   });
 </script>
