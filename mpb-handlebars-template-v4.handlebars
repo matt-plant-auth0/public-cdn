@@ -261,7 +261,7 @@
     </footer>
 <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
 <script>
-  console.log('Using template version 4.2')
+  console.log('Using template version 4.3')
 
   function uuidv4() {
     return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
@@ -303,9 +303,7 @@
         realm: 'anonymous-users',
         username: username,
         password: 'anonymous'
-      }).then(res => {
-        console.log(res);
-      })
+      });
     })
   });
 </script>
