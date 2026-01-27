@@ -274,19 +274,18 @@
     clientID:     'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv'
   });
 
-  const response = await fetch("https://mpb-demo.oktademo.cloud/dbconnections/signup", {
+  const response = fetch("https://mpb-demo.oktademo.cloud/dbconnections/signup", {
     method: "POST",
     body: JSON.stringify({ 
       connection: 'anonymous-users',
       username: `mpb_anon_${uuidv4}`,
       app_metadata: { first_visit_timestamp: Date.now() } 
     })
+  }).then(res => {
+    res.json().then(json => {
+      console.log(json);
+    })
   });
-
-  let signup = await response.json();
-
-  console.log(signup);
-
 </script>
 </body>
 </html>
