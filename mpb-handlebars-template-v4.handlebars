@@ -261,7 +261,7 @@
     </footer>
 <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
 <script>
-  console.log('Using template version 4.6')
+  console.log('Using template version 4.7')
 
   function uuidv4() {
     return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
@@ -286,20 +286,21 @@
   }
 
   function login(username) {
+    var urlencoded = new URLSearchParams();
+    urlencoded.append('grant_type', 'http://auth0.com/oauth/grant-type/password-realm');
+    urlencoded.append('clientID', 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv');
+    urlencoded.append('realm', 'anonymous-users');
+    urlencoded.append('username', username);
+    urlencoded.append('password', 'anonymous');
+    urlencoded.append('audience', 'demonstration');
+
     fetch("https://mpb-demo.oktademo.cloud/oauth/token", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
         "Accept": "application/json"
       },
-      body: JSON.stringify({ 
-        grant_type: 'http://auth0.com/oauth/grant-type/password-realm',
-        clientID: 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv',
-        realm: 'anonymous-users',
-        username: username,
-        password: 'anonymous',
-        audience: 'demonstration'
-      })
+      body: urlencoded
     }).then(res => {
       res.json().then(json => {
         console.log(json);
