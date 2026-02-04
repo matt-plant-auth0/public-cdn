@@ -261,12 +261,28 @@
     </footer>
 <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
 <script>
-  console.log('Using template version 4.3')
+  console.log('Using template version 4.4')
 
   function uuidv4() {
     return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
       (+c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> +c / 4).toString(16)
     );
+  }
+
+  function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
   }
 
   var webAuth = new auth0.WebAuth({
@@ -276,7 +292,15 @@
     audience: 'demonstration'
   });
 
-  let username = uuidv4();
+  let anonSession = getCookie('auth0_anon_session');
+  if (anonSession) {
+    webAuth.login({
+      realm: 'anonymous-users',
+      username: anonSession,
+      password: 'anonymous'
+    });
+  } else {
+   let username = uuidv4();
 
   if(username.length > 15){
     username = username.substring(0, 15);
@@ -305,7 +329,8 @@
         password: 'anonymous'
       });
     })
-  });
+  }); 
+  }
 </script>
 </body>
 </html>
