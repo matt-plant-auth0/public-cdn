@@ -261,7 +261,7 @@
     </footer>
 <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
 <script>
-  console.log('Using template version 4.4')
+  console.log('Using template version 4.5')
 
   function uuidv4() {
     return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
@@ -285,12 +285,12 @@
     return "";
   }
 
-  var webAuth = new auth0.WebAuth({
+  /*var webAuth = new auth0.WebAuth({
     domain: 'mpb-demo.oktademo.cloud',
     clientID: 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv',
     responseType: 'token',
     audience: 'demonstration'
-  });
+  });*/
 
   let anonSession = getCookie('auth0_anon_session');
   if (anonSession) {
@@ -323,11 +323,11 @@
     res.json().then(json => {
       console.log(json);
       document.cookie = `auth0_anon_session=${username}`;
-      webAuth.login({
+      /*webAuth.login({
         realm: 'anonymous-users',
         username: username,
         password: 'anonymous'
-      });
+      });*/
     })
   }); 
   }
