@@ -261,7 +261,7 @@
     </footer>
 <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
 <script>
-  console.log('Using template version 4.5')
+  console.log('Using template version 4.6')
 
   function uuidv4() {
     return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
@@ -285,51 +285,59 @@
     return "";
   }
 
-  /*var webAuth = new auth0.WebAuth({
-    domain: 'mpb-demo.oktademo.cloud',
-    clientID: 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv',
-    responseType: 'token',
-    audience: 'demonstration'
-  });*/
+  function login(username) {
+    fetch("https://mpb-demo.oktademo.cloud/oauth/token", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({ 
+        grant_type: 'http://auth0.com/oauth/grant-type/password-realm',
+        clientID: 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv',
+        realm: 'anonymous-users',
+        username: username,
+        password: 'anonymous',
+        audience: 'demonstration'
+      })
+    }).then(res => {
+      res.json().then(json => {
+        console.log(json);
+        document.cookie = `auth0_anon_token=${json.access_token}`;
+      })
+    });
+  }
 
   let anonSession = getCookie('auth0_anon_session');
   if (anonSession) {
-    webAuth.login({
-      realm: 'anonymous-users',
-      username: anonSession,
-      password: 'anonymous'
-    });
+    login(anonSession);
   } else {
    let username = uuidv4();
 
-  if(username.length > 15){
-    username = username.substring(0, 15);
-  }
+    if(username.length > 15){
+      username = username.substring(0, 15);
+    }
 
-  const response = fetch("https://mpb-demo.oktademo.cloud/dbconnections/signup", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json"
-    },
-    body: JSON.stringify({ 
-      clientID: 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv',
-      connection: 'anonymous-users',
-      username: username,
-      password: 'anonymous',
-      app_metadata: { first_visit_timestamp: Date.now() }
-    })
-  }).then(res => {
-    res.json().then(json => {
-      console.log(json);
-      document.cookie = `auth0_anon_session=${username}`;
-      /*webAuth.login({
-        realm: 'anonymous-users',
+    fetch("https://mpb-demo.oktademo.cloud/dbconnections/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({ 
+        clientID: 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv',
+        connection: 'anonymous-users',
         username: username,
-        password: 'anonymous'
-      });*/
-    })
-  }); 
+        password: 'anonymous',
+        app_metadata: { first_visit_timestamp: Date.now() }
+      })
+    }).then(res => {
+      res.json().then(json => {
+        console.log(json);
+        document.cookie = `auth0_anon_session=${username}`;
+        login(username);
+      })
+    });
   }
 </script>
 </body>
