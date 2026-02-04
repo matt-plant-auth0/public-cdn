@@ -261,7 +261,7 @@
     </footer>
 <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
 <script>
-  console.log('Using template version 4.7')
+  console.log('Using template version 4.8')
 
   function uuidv4() {
     return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
@@ -288,7 +288,7 @@
   function login(username) {
     var urlencoded = new URLSearchParams();
     urlencoded.append('grant_type', 'http://auth0.com/oauth/grant-type/password-realm');
-    urlencoded.append('clientID', 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv');
+    urlencoded.append('client_id', 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv');
     urlencoded.append('realm', 'anonymous-users');
     urlencoded.append('username', username);
     urlencoded.append('password', 'anonymous');
@@ -326,7 +326,7 @@
         "Accept": "application/json"
       },
       body: JSON.stringify({ 
-        clientID: 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv',
+        client_id: 'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv',
         connection: 'anonymous-users',
         username: username,
         password: 'anonymous',
