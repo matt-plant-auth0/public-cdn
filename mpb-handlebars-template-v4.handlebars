@@ -261,14 +261,15 @@
     </footer>
 <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
 <script>
-  console.log('Using template version 4.91')
+  console.log('Using template version 4.92')
   
   document.getElementById('sign-in').addEventListener("click", event => {
     event.preventDefault();
     let anonToken = getCookie('auth0_anon_token');
     var webAuth = new auth0.WebAuth({
       domain:       'mpb-demo.oktademo.cloud',
-      clientID:     'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv'
+      clientID:     'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv',
+      responseType: 'code'
     });
 
     if(anonToken){
