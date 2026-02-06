@@ -263,7 +263,7 @@
 <script>
   console.log('Using template version 4.9')
   
-  document.getElementById('sign-in').onclick(event => {
+  document.getElementById('sign-in').onClick(event => {
     event.preventDefault();
     let anonToken = getCookie('auth0_anon_token');
     var webAuth = new auth0.WebAuth({
