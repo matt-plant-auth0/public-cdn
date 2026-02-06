@@ -211,7 +211,7 @@
             <a href="#">Sell</a>
             <a href="#">Trade</a>
             <a href="#">Explore</a>
-            <a href="#" class="btn-sell">Sell your kit</a>
+            <a id="sign-in" href="#" class="btn-sell">Sell your kit</a>
         </div>
     </nav>
 
@@ -261,7 +261,22 @@
     </footer>
 <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
 <script>
-  console.log('Using template version 4.8')
+  console.log('Using template version 4.9')
+  
+  document.getElementById('sign-in').onclick(event => {
+    event.preventDefault();
+    let anonToken = getCookie('auth0_anon_token');
+    var webAuth = new auth0.WebAuth({
+      domain:       'mpb-demo.oktademo.cloud',
+      clientID:     'oKVK54lfgDytqr9NI1pwvnWTsvBpvVFv'
+    });
+
+    if(anonToken){
+      webAuth.authorize({anon_token: anonToken});
+    } else {
+      webAuth.authorize();
+    }
+  });
 
   function uuidv4() {
     return "10000000-1000-4000-8000-100000000000".replace(/[018]/g, c =>
