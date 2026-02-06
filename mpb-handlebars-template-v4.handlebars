@@ -261,9 +261,9 @@
     </footer>
 <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
 <script>
-  console.log('Using template version 4.9')
+  console.log('Using template version 4.91')
   
-  document.getElementById('sign-in').onClick(event => {
+  document.getElementById('sign-in').addEventListener("click", event => {
     event.preventDefault();
     let anonToken = getCookie('auth0_anon_token');
     var webAuth = new auth0.WebAuth({
